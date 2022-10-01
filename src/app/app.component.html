@@ -29,18 +29,13 @@
         </button>
       </div>
     </form>
-  </div>
-  <br>
-
-  <div class="container">
     <hr>
-    <div class="row">
-      <div class="col">
-        <div *ngFor="let persona of personas; let i= index"><!-- Persona va a almacenar lo que contiene Personas, cuando es en plural se hace una referencia a un array, ngFor sirve para iterar, let i = index sirve para incrementar cada vez que se recorre  -->
-        {{i + 1}} : {{persona.nombre}} {{persona.apellido}} <!-- Con i se imprime los valores que recorre y + 1 para que empiece con 1 y no con 0 -->
-        </div>
-      </div>
-    </div>
+    <app-persona *ngFor="let personaElemento of personas; let i= index"
+    [persona] = "personaElemento"
+    [indice] = "i">
+
+    </app-persona>
   </div>
+
 </body>
 </html>
