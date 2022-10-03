@@ -9,7 +9,7 @@
     <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" #apellidoInput> <!-- Aca tambien se puede usar [(ngModel)] ="apellidoInput" -->
   </div>
   <div class="col">
-    <button type="submit" class="btn btn-primary" (click)="agregarPersona(nombreInput, apellidoInput)">
+    <button type="submit" class="btn btn-primary" (click)="agregarPersona()"> <!-- (click)="agregarPersona(nombreInput, apellidoInput)" se usa con referencia local -->
       Agregar
     </button>
   </div>
