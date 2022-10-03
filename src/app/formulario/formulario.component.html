@@ -1,0 +1,16 @@
+<form class="row g-2"> <!-- row ya que se aplica de forma horizontal -->
+  <div class="form-group col-md-2">
+    <label for="nombre" class="visually-hidden">Nombre</label> <!-- sr-only hace que no se vea -->
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre"
+  class="form-control" #nombreInput/> <!-- Aca se puede usar [(ngModel)]="nombreInput" -->
+  </div>
+  <div class="form-group col-md-2">
+    <label for="apellido" class="visually-hidden">Apellido</label> <!-- sr-only hace que no se vea -->
+    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" #apellidoInput> <!-- Aca tambien se puede usar [(ngModel)] ="apellidoInput" -->
+  </div>
+  <div class="col">
+    <button type="submit" class="btn btn-primary" (click)="agregarPersona(nombreInput, apellidoInput)">
+      Agregar
+    </button>
+  </div>
+</form>

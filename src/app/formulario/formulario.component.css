@@ -1,0 +1,14 @@
+.btn-primary:hover{
+  background-color: #ede0d4;
+  color: black;
+}
+
+.btn-primary {
+  background-color: #9c6644;
+  border: #9c6644;
+}
+
+
+input{
+  border-color: #9c6644;
+}

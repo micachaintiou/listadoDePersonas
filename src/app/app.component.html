@@ -13,22 +13,9 @@
       <h3>{{title}}</h3>
     </div>
     <hr/> <!-- Agrega la linea -->
-    <form class="row g-2"> <!-- row ya que se aplica de forma horizontal -->
-      <div class="form-group col-md-2">
-        <label for="nombre" class="visually-hidden">Nombre</label> <!-- sr-only hace que no se vea -->
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre"
-      class="form-control" [(ngModel)]="nombreInput">
-      </div>
-      <div class="form-group col-md-2">
-        <label for="apellido" class="visually-hidden">Apellido</label> <!-- sr-only hace que no se vea -->
-        <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" [(ngModel)] ="apellidoInput">
-      </div>
-      <div class="col">
-        <button type="submit" class="btn btn-primary" (click)="agregarPersona()">
-          Agregar
-        </button>
-      </div>
-    </form>
+    <app-formulario (personaCreada)="personaAgregada($event)">
+
+    </app-formulario>
     <hr>
     <app-persona *ngFor="let personaElemento of personas; let i= index"
     [persona] = "personaElemento"
