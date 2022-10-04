@@ -19,8 +19,8 @@ export class FormularioComponent {
   @ViewChild('nombreInput') nombre:ElementRef;
   @ViewChild('apellidoInput') apellido:ElementRef;
 
-  constructor(private loggingService:LoggingService, private personaService:PersonasService){
-
+  constructor(private loggingService:LoggingService, private personasService:PersonasService){
+  this.personasService.saludar.subscribe((indice:number) => alert("El indice es: " + indice));
   }
 
  /* agregarPersona(){
@@ -35,7 +35,7 @@ export class FormularioComponent {
       let persona1 = new Persona(this.nombre.nativeElement.value, this.apellido.nativeElement.value); //Se usa para recuperar el valor de la plantilla cuando se usa view child
       /*this.loggingService.enviarMensajeAConsola("Enviamos persona:" + persona1.nombre + "apellido: " + persona1.apellido);
       this.personaCreada.emit(persona1);*/
-      this.personaService.agregarPersona(persona1);
+      this.personasService.agregarPersona(persona1);
   }
 
 
