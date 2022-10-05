@@ -1,29 +1,3 @@
-body{
-  /*background: radial-gradient(circle, #ede0d4, #ddb892 );*/
-  background: repeating-conic-gradient(#ffedd8 0% 25%, #f3d5b5 0% 50%) 50%/60px 60px;
-}
-
-h3{
-  color: #8b5e34;
-}
-
-div.container{
-  padding: 1cm 1cm 4.70cm 1cm;
-  padding-bottom: 50%;
-}
-
-div.col{
-  top:100px;
-  left: 50px;
-  width: 50%;
-
-}
-
-
-input{
-  border-color: #9c6644;
-}
-
 
 
 
