@@ -1,10 +1,11 @@
 body{
-  /*background: radial-gradient(circle, #ede0d4, #ddb892 );*/
-  background: repeating-conic-gradient(#ffedd8 0% 25%, #f3d5b5 0% 50%) 50%/60px 60px;
+  /*background: radial-gradient(circle, #ffd7ba, #ece4db );*/
+ /* background: repeating-conic-gradient(#ffedd8 0% 25%, #f3d5b5 0% 50%) 50%/60px 60px;*/
+ background-color: #f4f1de;
 }
 
 h3{
-  color: #8b5e34;
+  color: #a3c4f3;
 }
 
 div.container{

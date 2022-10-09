@@ -1,4 +1,4 @@
-.btn-primary:hover{
+/*.btn-primary:hover{
   background-color: #ede0d4;
   color: black;
 }
@@ -11,4 +11,19 @@
 
 input{
   border-color: #9c6644;
+}*/
+
+.btn-primary{
+  -webkit-box-shadow: 5px 5px 15px 5px #ffcfd2, -9px 5px 15px 5px #f1c0e8, -7px -5px 15px 5px #cfbaf0, 12px -5px 15px 5px #a3c4f3, 12px 10px 15px 7px #90dbf4, -10px 10px 15px 7px #8eecf5, -10px -7px 27px 1px #98f5e1, 5px 5px 5px 5px rgba(0,0,0,0);
+  box-shadow: 5px 5px 15px 5px #ffcfd2, -9px 5px 15px 5px #f1c0e8, -7px -5px 15px 5px #cfbaf0, 12px -5px 15px 5px #a3c4f3, 12px 10px 15px 7px #90dbf4, -10px 10px 15px 7px #8eecf5, -10px -7px 27px 1px #98f5e1, 5px 5px 5px 5px rgba(0,0,0,0);
+  background-color: #fde4cf;
+  color: black;
+  border: #fde4cf;
+}
+
+.btn-primary:hover{
+  background-color: #fbf8cc;
+  color: black;
+  transition: transform 200ms;
+  transform: scale(1.1);
 }
