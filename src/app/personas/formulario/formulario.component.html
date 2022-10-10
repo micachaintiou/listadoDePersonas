@@ -1,7 +1,8 @@
 <form class="item"> <!-- row ya que se aplica de forma horizontal -->
     <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombreInput">
     <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)]="apellidoInput"> <!-- Aca tambien se puede usar [(ngModel)] ="apellidoInput" -->
-    <button type="submit" class="btn btn-primary" (click)="agregarPersona()"> <!-- (click)="agregarPersona(nombreInput, apellidoInput)" se usa con referencia local -->
-      +
-    </button>
+      <button type="submit" class="btn btn-primary" (click)="agregarPersona()"> <!-- (click)="agregarPersona(nombreInput, apellidoInput)" se usa con referencia local -->
+        +
+      </button>
+
 </form>
