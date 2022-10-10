@@ -91,9 +91,27 @@ button:is(:hover, :focus){
   transform: scale(1.6);
   opacity: 0.6;
   transition: transform 150ms cubic-bezier(0.5, 1.75, 0.75, 1.25);
-
 }
 
+.buttonRed{
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #e26d5c;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+  transition: all 2s ease-in 200ms;
+}
+
+.buttonRed:is(:hover, :focus){
+  background-color: #e26d5c;
+  transform: scale(1.6);
+  opacity: 0.6;
+  transition: transform 150ms cubic-bezier(0.5, 1.75, 0.75, 1.25);
+}
 input[type="text"] {
   text-align: center;
   height: 60px;
