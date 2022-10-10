@@ -1,8 +1,11 @@
-<form class="item"> <!-- row ya que se aplica de forma horizontal -->
-    <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombreInput">
-    <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)]="apellidoInput"> <!-- Aca tambien se puede usar [(ngModel)] ="apellidoInput" -->
-      <button type="submit" class="btn btn-primary" (click)="agregarPersona()"> <!-- (click)="agregarPersona(nombreInput, apellidoInput)" se usa con referencia local -->
-        +
-      </button>
+<div class="box">
+  <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && onGuardarPersona()" ><!-- row ya que se aplica de forma horizontal, este ngForm se usa para que si no se escribe lo que pide que no se mande el formulario -->
+      <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombreInput" required>
+      <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)]="apellidoInput" required=""> <!-- Aca tambien se puede usar [(ngModel)] ="apellidoInput" -->
+        <button type="submit" style="cursor: pointer"> <!-- (click)="agregarPersona(nombreInput, apellidoInput)" se usa con referencia local -->
+          +
+        </button>
 
-</form>
+  </form>
+</div>
+

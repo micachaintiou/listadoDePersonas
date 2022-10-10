@@ -1,5 +1,6 @@
 //import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LoggingService } from '../../LoggingService.service';
 import { Persona } from '../../persona.model';
 import { PersonasService } from '../../personas.service';
@@ -15,29 +16,37 @@ export class FormularioComponent {
 
   nombreInput:string = '';
   apellidoInput:string = '';
+  index:number;
   //personas: any;
   /*@ViewChild('nombreInput') nombre:ElementRef;
   @ViewChild('apellidoInput') apellido:ElementRef;*/
 
-  constructor(private loggingService:LoggingService, private personasService:PersonasService){
+  constructor(private loggingService:LoggingService, private personasService:PersonasService, private router:Router, private route:ActivatedRoute){
   this.personasService.saludar.subscribe((indice:number) => alert("El indice es: " + indice));
+
   }
 
- /* agregarPersona(){
-    let persona1 = new Persona(this.nombreInput, this.apellidoInput);
-    //this.personas.push(persona1); //Agrega
-    this.personaCreada.emit(persona1); //Se recibe desde el elemento padre
-  } De esta forma es si uso event Biding*/
+  ngOnInit(){
+  this.index = this.route.snapshot.params['id'];
+  if(this.index){
+    let persona: Persona = this.personasService.encontrarPersona(this.index);
+      this.nombreInput = persona.nombre;
+      this.apellidoInput = persona.apellido;
 
-  //agregarPersona(nombreInput:HTMLInputElement,apellidoInput:HTMLInputElement){
-    //let persona1 = new Persona(nombreInput.value, apellidoInput.value); Es con refeencias locales
-    agregarPersona(){
+    }
+  }
+
+   onGuardarPersona(){
       let persona1 = new Persona(this.nombreInput, this.apellidoInput);
-      //let persona1 = new Persona(this.nombre.nativeElement.value, this.apellido.nativeElement.value); //Se usa para recuperar el valor de la plantilla cuando se usa view child
-      /*this.loggingService.enviarMensajeAConsola("Enviamos persona:" + persona1.nombre + "apellido: " + persona1.apellido);
-      this.personaCreada.emit(persona1);*/
-      this.personasService.agregarPersona(persona1);
+      if(this.index){
+        this.personasService.modificarPersona(this.index, persona1)
+      }else{
+        this.personasService.agregarPersona(persona1);
+
+      }
+      this.router.navigate(['personas'])
   }
-
-
 }
+
+
+

@@ -23,7 +23,7 @@ export class PersonasComponent implements OnInit {
   }
 
   agregar(){
-  this.router
+  this.router.navigate(['personas/agregar'])
   }
 
 }

@@ -1,6 +1,12 @@
 <div class="item">
-  <input type="checkbox" (click)="emitirSaludo()">
-    <p> {{indice + 1}} : {{persona.nombre}} {{persona.apellido}} </p> <!-- Con i se imprime los valores que recorre y + 1 para que empiece con 1 y no con 0 --> <!-- Persona va a almacenar lo que contiene Personas, cuando es en plural se hace una referencia a un array, ngFor sirve para iterar, let i = index sirve para incrementar cada vez que se recorre  -->
+  <ul>
+    <li>
+      <a [routerLink]="['/personas',indice]">
+        {{persona.nombre}} {{persona.apellido}}
+
+      </a>
+    </li>
+  </ul>
 
   </div>
 
