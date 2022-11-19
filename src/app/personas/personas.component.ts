@@ -18,8 +18,17 @@ export class PersonasComponent implements OnInit {
               private router:Router){
 
   }
+ //ngOnInit(): void {
+    //this.personas = this.personaService.personas;
+  //}
+
   ngOnInit(): void {
-    this.personas = this.personaService.personas;
+      this.personaService.obtenerPersonas()
+      .subscribe( //Se usa subscribe para que se ejecute este metodo
+      (personas: Persona[]) => {
+      this.personas = personas;
+      }
+      );
   }
 
   agregar(){
